@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anish Khaple - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+    nav {
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 1.8em;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 8px 0;
+      padding: 8px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    ul li:hover {
+      transform: scale(1.02);
+      background: rgba(255,255,255,0.25);
+    }
+    .collapsible {
+      cursor: pointer;
+      padding: 10px;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.2em;
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .active, .collapsible:hover {
+      background: rgba(255,215,0,0.4);
+    }
+    .content {
+      display: none;
+      padding: 0 15px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Anish Khaple</h1>
+  <p>📞 7447663460 | 📧 anishkhaple@gmail.com</p>
+  <p>🎓 Diploma in Electronics & Communication (Second Semester), Y.B. Patil Polytechnic, Pune</p>
+</header>
+
+<nav>
+  <a href="#summary">Summary</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#hobbies">Hobbies</a>
+</nav>
+
+<section id="summary">
+  <h2>Professional Summary</h2>
+  <p>Enthusiastic Electronics & Communication diploma student with hands-on experience in Java programming, Arduino, and ESP32 projects. Passionate about robotics, embedded systems, and innovation. Strong communication skills and stage confidence, eager to contribute to technical projects and entrepreneurial challenges.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <button class="collapsible">Show Skills</button>
+  <div class="content">
+    <ul>
+      <li>Intermediate Java Programming</li>
+      <li>Arduino & ESP32 Development</li>
+      <li>Electronics & Communication Fundamentals</li>
+      <li>Good Communication Skills</li>
+      <li>Stage daring / Public Speaking Confidence</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <button class="collapsible">Show Projects</button>
+  <div class="content">
+    <ul>
+      <li><strong>Line Following Robot</strong> — Autonomous navigation using sensors and Arduino</li>
+      <li><strong>Mini Radar System</strong> — Object detection and tracking with ESP32</li>
+    </ul>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates & Achievements</h2>
+  <button class="collapsible">Show Certificates</button>
+  <div class="content">
+    <ul>
+      <li>🏆 PaperSpark 2025 — Secured 4th Place in State Level ISTE Paper Presentation Competition</li>
+      <li>🚀 Shark Tank YBPP-25 — Participated in National Entrepreneurship Challenge 2025 (IIT Bombay E-Cell)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="hobbies">
+  <h2>Hobbies</h2>
+  <button class="collapsible">Show Hobbies</button>
+  <div class="content">
+    <ul>
+      <li>Playing Badminton 🏸</li>
+      <li>Adventure Activities 🌍</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  const coll = document.getElementsByClassName("collapsible");
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
